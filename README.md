@@ -1,2 +1,2 @@
 # recipe-api
-Recipe API Python
+Recipe API Python and Django
