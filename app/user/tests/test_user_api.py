@@ -129,7 +129,7 @@ class PrivateUserApiTests(TestCase):
             'email':self.user.email,
         })
 
-    def post_me_not_allowed(self):
+    def test_post_me_not_allowed(self):
         """Test POST method is not allowed for the me endpoint."""
         res = self.client.post(ME_URL, {})
 
