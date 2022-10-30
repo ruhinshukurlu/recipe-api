@@ -18,6 +18,7 @@ def create_user(email='user@example.com', password='testpass123'):
     """Create and return new user"""
     return get_user_model().objects.create_user(email,password)
 
+
 def detail_url(tag_id):
     """Create and return tag detail url."""
     return reverse('recipe:tag-detail',args=[tag_id])
@@ -36,7 +37,7 @@ class PublicTagApiTests(TestCase):
         self.assertEqual(res.status_code, status.HTTP_401_UNAUTHORIZED)
 
 
-class PublicTagApiTests(TestCase):
+class PrivateTagApiTests(TestCase):
     """Test authenticated api requests."""
 
     def setUp(self):
