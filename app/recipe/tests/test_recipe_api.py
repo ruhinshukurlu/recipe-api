@@ -401,7 +401,7 @@ class PrivateRecipeAPITests(TestCase):
         r2 = create_recipe(user=self.user, title='Recipe2 title')
         ing1 = Ingredient.objects.create(user=self.user, name='Ingredient1')
         ing2 = Ingredient.objects.create(user=self.user, name='Ingredient2')
-        r1.ingredients.ad(ing1)
+        r1.ingredients.add(ing1)
         r2.ingredients.add(ing2)
         r3 = create_recipe(user = self.user, title = 'Recipe3 title')
 
